@@ -1,4 +1,5 @@
 /bin/
 *.classpath
 *.class
-.worksheet/src/FirstWorksheet.scala
+*.scala
+/.cache-main
