@@ -42,4 +42,19 @@ object FirstWorksheet {
   	case (1,_) => "one"
   	case i => "Something bigger, "+i
   }                                               //> tuple  : String = zero
+  
+  // functions
+  def square(x:Double):Double = {
+  	return x*x
+  }                                               //> square: (x: Double)Double
+  
+  square(5.5)                                     //> res5: Double = 30.25
+  
+  // string interpolation example
+  def greet(name:String):Unit = {
+  	println(s"Hello, $name")
+  }                                               //> greet: (name: String)Unit
+  
+  greet("Conor")                                  //> Hello, Conor
+  
 }
