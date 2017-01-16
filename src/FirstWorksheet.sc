@@ -57,4 +57,24 @@ object FirstWorksheet {
   
   greet("Conor")                                  //> Hello, Conor
   
+  
+  // recursion
+  def factorial(n:Int):Double = if(n<2) 1 else n*factorial(n-1)
+                                                  //> factorial: (n: Int)Double
+
+	factorial(a)                              //> res6: Double = 120.0
+	
+	def estimatePi(n:Int):Double = {
+		def helper(n:Int):Double =  {
+			if (n<1) 0 else {
+				var x = math.random
+				val y = math.random
+				(if(x*x+y*y<1) 1 else 0)+helper(n-1)
+			}
+		}
+		helper(n)/n*4
+	}                                         //> estimatePi: (n: Int)Double
+	
+	estimatePi(100)                           //> res7: Double = 3.28
+	
 }
