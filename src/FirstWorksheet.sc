@@ -65,16 +65,18 @@ object FirstWorksheet {
 	factorial(a)                              //> res6: Double = 120.0
 	
 	def estimatePi(n:Int):Double = {
-		def helper(n:Int):Double =  {
-			if (n<1) 0 else {
-				var x = math.random
+		def helper(n:Int, sum:Int):Double =  {
+			if (n<1) sum else {
+				var x = math.random// randome number between 0 and 1
 				val y = math.random
-				(if(x*x+y*y<1) 1 else 0)+helper(n-1)
+				// (if(x*x+y*y<1) 1 else 0)+helper(n-1)// recursive call
+				helper(n-1, sum+(if(x*x+y*y<1) 1 else 0))
 			}
 		}
-		helper(n)/n*4
+		helper(n,0)/n*4
 	}                                         //> estimatePi: (n: Int)Double
 	
-	estimatePi(100)                           //> res7: Double = 3.28
+	estimatePi(100)                           //> res7: Double = 3.48
+	// estimatePi(1000000)
 	
 }
