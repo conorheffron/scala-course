@@ -29,5 +29,13 @@ object HigherOrderMethods {
 
   a.foldLeft(0)(_ + _)                            //> res11: Int = 15
   a.foldLeft("0")(_ + _)                          //> res12: String = 012345
+  
+  b.find(_ == 8)                                  //> res13: Option[Int] = Some(8)
+  b.find(_%3 == 0)                                //> res14: Option[Int] = Some(9)
+  b.find(_%7 == 0)                                //> res15: Option[Int] = None
+  
+  b.find(_%3 == 0).map(_/3)                       //> res16: Option[Int] = Some(3)
+  
+  b.find(_%3 == 0).map(_/3).getOrElse(0)          //> res17: Int = 3
 
 }
