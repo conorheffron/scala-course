@@ -1,6 +1,6 @@
 /bin/
 *.classpath
 *.class
-*.scala
 /.cache-main
 /.project
+/.worksheet/

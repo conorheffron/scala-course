@@ -5,14 +5,13 @@ object SyntacticSugar {
                                                   //| 2
                                                   //| 3
                                                   //| 4
-  
   def foo(i:Int):Unit = 0                         //> foo: (i: Int)Unit
   
   foo(5)
   
   foo{5}
   
-    foo {
+  foo{
   	println("hi")
   	7
   }                                               //> hi
@@ -37,7 +36,6 @@ object SyntacticSugar {
                                                   //| 2
                                                   //| 3
                                                   //| 4
-  
   i = 0
 	while(i<5) {
 		println(i)
@@ -47,6 +45,5 @@ object SyntacticSugar {
                                                   //| 2
                                                   //| 3
                                                   //| 4
-	
 
 }
