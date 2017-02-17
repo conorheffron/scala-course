@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rooms>
+	<room name="The Inn" keyword="inn">
+		<description>
+You are standing in a shabby inn.
+		</description>
+		<exit dir="south" dest="square"></exit>
+		<item name="cup">
+			<description>A dirty, chipped, ceramic cup</description>
+		</item>
+	</room>
+	<room name="Town Square" keyword="square">
+		<description>
+This is the town square.
+		</description>
+		<exit dir="north" dest="inn"></exit>
+	</room>
+</rooms>
