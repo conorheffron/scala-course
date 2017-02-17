@@ -6,7 +6,6 @@ import scala.annotation.tailrec
 object MUDServer extends App {
   println("What is your name?")
   val player = Player(readLine(),"inn")
-  new java.io.File(".").getAbsolutePath() 
   val rooms = (xml.XML.loadFile("src/map.xml") \ "room").map(n => {
     val room = Room(n)
     room.keyword -> room
